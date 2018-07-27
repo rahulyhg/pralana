@@ -1,0 +1,27 @@
+[builderList produtos]
+modelClass = "AlamoComunicacao\Pralana\Models\Produtos"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "nome"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "destaque"
+sortDirection = "desc"
+==
+{% set records = produtos.records %}
+
+{% for record in records %}
+    {% if loop.index < 9 %}
+    <div class="carousel-cell">
+        <a data-fancybox data-type="iframe" data-src="{{'/'|app}}/produto/{{record.id}}">
+            <div class="img">
+                <img src="{{record.image.getPath()}}" alt="">
+            </div>
+            <strong>{{record.nome}}</strong><br>
+            Cod. {{record.codigo}}
+        </a>
+    </div>
+    {% endif %}
+{% endfor %}

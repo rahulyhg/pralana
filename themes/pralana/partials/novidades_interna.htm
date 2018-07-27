@@ -1,0 +1,26 @@
+{% if records.records %}
+<div class="blnot" >
+    {% for record in records.records %}
+        <div class="not">
+            <img src="{{record.imagens[0].getPath()}}" alt="">
+            <div class="inf">
+                <h3>{{record.titulo}}</h3>
+                <p>{{str_words(record.resumo,100)}}</p>
+                <a href="noticia/{{record.slug}}">Veja mais</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% else %}
+<h3>Nenhuma notícia encontrada</h3>
+{% endif %}
+
+{% if records.pages %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+        {% for i in 1..records.pages %}
+            <li {% if records.page==i %}class="active"{% endif %}><a href="" data-request="{{records.action}}" data-request-data="page: {{i}}, cat: {{records.cat}}" data-request-loading>{{i}}</a></li>
+        {% endfor %}
+        </ul>
+    </nav>
+{% endif %}

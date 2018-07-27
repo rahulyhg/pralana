@@ -1,0 +1,62 @@
+fields:
+    nome:
+        label: Nome
+        span: full
+        type: text
+    codigo:
+        label: Código
+        span: auto
+        type: text
+    categoria:
+        label: Categoria
+        nameFrom: nome
+        descriptionFrom: description
+        span: auto
+        type: relation
+    tags:
+        label: Filtros
+        nameFrom: nome
+        descriptionFrom: description
+        span: auto
+        type: relation
+    cor:
+        label: Cores
+        nameFrom: nome
+        descriptionFrom: description
+        span: auto
+        type: relation
+    aba:
+        label: Aba
+        span: left
+        type: text
+    material:
+        label: Material
+        span: right
+        type: text
+    carneira:
+        label: Carneira
+        span: auto
+        type: text
+    destaque:
+        label: 'Destaque Home'
+        span: right
+        type: switch
+    forro:
+        label: 'Tem forro?'
+        span: right
+        type: switch
+    image:
+        label: Imagem
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    tamanho:
+        label: Tamanho
+        nameFrom: tamanho
+        descriptionFrom: description
+        span: auto
+        type: relation

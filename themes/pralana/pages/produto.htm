@@ -1,0 +1,76 @@
+title = "produto"
+url = "/produto/:id"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "AlamoComunicacao\Pralana\Models\Produtos"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "nome"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapéus Pralana</title>
+    <link rel="icon" href="{{ ['assets/img/icon.png?v=1.1']|theme }}"> 
+    <link rel="stylesheet" href="{{ ['assets/css/plugins.css','assets/css/geral.css']|theme }}">
+    {% styles %}
+    <style>
+    html,body{
+        width: 100%;
+        height: 100%;    
+    }
+    </style>
+</head>
+<body>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b3a5700b8f41ece"></script> 
+    <div class="detproduto">
+        <div class="img">
+            <h2>{{record.nome}}</h2>
+            <h6>Cod. <strong>{{record.codigo}}</strong> - 
+                {% for tag in record.tags %}
+                {{tag.nome}} | 
+                {% endfor %}
+            </h6>
+            <div class="img">
+                <img src="{{record.image.getPath()}}" alt="">
+            </div>
+        </div>
+        <div class="dets">
+            <h2>Especificações</h2>
+            <h3>Cores</h3>
+            <div class="cores">
+                {% for cor in record.cor %}
+                <h5>{{cor.nome}}</h5>
+                {% endfor %}
+            </div>
+            <h3>Tamanhos</h3>
+            <ul class="nav tamanhos">
+                {% for tamanho in record.tamanho %}
+                <li>{{tamanho.tamanho}}</li>
+                {% endfor %}
+            </ul>
+            <h3>Material</h3>
+            <p>{{record.material}}</p>
+            {% if record.aba %}
+            <h3>Aba</h3>
+            <p>{{record.aba}}</p>
+            {% endif %}
+            <h3>Carneira</h3>
+            <p>{{record.carneira}}</p>
+            {% if record.forro %}
+            <h3>Forro</h3>
+            <p>{% if record.forro == 1 %}Sim{% else %}Não{% endif %}</p>
+            {% endif %}
+            <h3>Compartilhar</h3>
+            <div class="addthis_inline_share_toolbox"></div> 
+        </div>
+    </div>
+    
+</body>
+</html>

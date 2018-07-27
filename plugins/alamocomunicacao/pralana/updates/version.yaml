@@ -1,0 +1,110 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table alamocomunicacao_pralana_banners'
+    - builder_table_create_alamocomunicacao_pralana_banners.php
+1.0.3:
+    - 'Updated table alamocomunicacao_pralana_banners'
+    - builder_table_update_alamocomunicacao_pralana_banners.php
+1.0.4:
+    - 'Created table alamocomunicacao_pralana_produtos'
+    - builder_table_create_alamocomunicacao_pralana_produtos.php
+1.0.5:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos.php
+1.0.6:
+    - 'Created table alamocomunicacao_pralana_categorias'
+    - builder_table_create_alamocomunicacao_pralana_categorias.php
+1.0.7:
+    - 'Updated table alamocomunicacao_pralana_categorias'
+    - builder_table_update_alamocomunicacao_pralana_categorias.php
+1.0.8:
+    - 'Drop table alamocomunicacao_pralana_categorias'
+    - builder_table_delete_alamocomunicacao_pralana_categorias.php
+1.0.9:
+    - 'Created table alamocomunicacao_pralana_categorias'
+    - builder_table_create_alamocomunicacao_pralana_categorias_2.php
+1.0.10:
+    - 'Created table alamocomunicacao_pralana_novidades'
+    - builder_table_create_alamocomunicacao_pralana_novidades.php
+1.0.11:
+    - 'Created table alamocomunicacao_pralana_artistas'
+    - builder_table_create_alamocomunicacao_pralana_artistas.php
+1.0.12:
+    - 'Created table alamocomunicacao_pralana_representantes'
+    - builder_table_create_alamocomunicacao_pralana_representantes.php
+1.0.13:
+    - 'Updated table alamocomunicacao_pralana_banners'
+    - builder_table_update_alamocomunicacao_pralana_banners_2.php
+1.0.14:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_2.php
+1.0.15:
+    - 'Created table alamocomunicacao_pralana_filtros'
+    - builder_table_create_alamocomunicacao_pralana_filtros.php
+1.0.16:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_3.php
+1.0.17:
+    - 'Created table alamocomunicacao_pralana_cat_nov'
+    - builder_table_create_alamocomunicacao_pralana_cat_nov.php
+1.0.18:
+    - 'Created table alamocomunicacao_pralana_rel_cat_nov'
+    - builder_table_create_alamocomunicacao_pralana_rel_cat_nov.php
+1.0.19:
+    - 'Drop table alamocomunicacao_pralana_rel_cat_nov'
+    - builder_table_delete_alamocomunicacao_pralana_rel_cat_nov.php
+1.0.20:
+    - 'Updated table alamocomunicacao_pralana_novidades'
+    - builder_table_update_alamocomunicacao_pralana_novidades.php
+1.0.21:
+    - 'Updated table alamocomunicacao_pralana_novidades'
+    - builder_table_update_alamocomunicacao_pralana_novidades_2.php
+1.0.22:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_4.php
+1.0.23:
+    - 'Created table alamocomunicacao_pralana_cores'
+    - builder_table_create_alamocomunicacao_pralana_cores.php
+1.0.24:
+    - 'Created table alamocomunicacao_pralana_cores_produtos'
+    - builder_table_create_alamocomunicacao_pralana_cores_produtos.php
+1.0.25:
+    - 'Created table alamocomunicacao_pralana_tamanhos'
+    - builder_table_create_alamocomunicacao_pralana_tamanhos.php
+1.0.26:
+    - 'Updated table alamocomunicacao_pralana_cores'
+    - builder_table_update_alamocomunicacao_pralana_cores.php
+1.0.27:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_5.php
+1.0.28:
+    - 'Updated table alamocomunicacao_pralana_tamanhos'
+    - builder_table_update_alamocomunicacao_pralana_tamanhos.php
+1.0.29:
+    - 'Created table alamocomunicacao_pralana_tamanhos_produtos'
+    - builder_table_create_alamocomunicacao_pralana_tamanhos_produtos.php
+1.0.30:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_6.php
+1.0.31:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_7.php
+1.0.32:
+    - 'Updated table alamocomunicacao_pralana_representantes'
+    - builder_table_update_alamocomunicacao_pralana_representantes.php
+1.0.33:
+    - 'Updated table alamocomunicacao_pralana_representantes'
+    - builder_table_update_alamocomunicacao_pralana_representantes_2.php
+1.0.34:
+    - 'Updated table alamocomunicacao_pralana_categorias'
+    - builder_table_update_alamocomunicacao_pralana_categorias_2.php
+1.0.35:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_8.php
+1.0.36:
+    - 'Updated table alamocomunicacao_pralana_banners'
+    - builder_table_update_alamocomunicacao_pralana_banners_3.php
+1.0.37:
+    - 'Updated table alamocomunicacao_pralana_artistas'
+    - builder_table_update_alamocomunicacao_pralana_artistas.php

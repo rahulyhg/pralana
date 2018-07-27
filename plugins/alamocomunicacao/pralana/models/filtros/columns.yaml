@@ -1,0 +1,6 @@
+columns:
+    nome:
+        label: Filtro
+        type: text
+        searchable: true
+        sortable: true

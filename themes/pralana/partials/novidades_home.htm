@@ -1,0 +1,23 @@
+[builderList novidadeshome]
+modelClass = "AlamoComunicacao\Pralana\Models\Novidades"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "titulo"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = novidadeshome.records %}
+
+{% for record in records %}
+    {% if loop.index < 8 %}
+    <div class="box item{{loop.index}}" style="background:url('{{record.imagens[0].getPath()}}')center;background-size:cover;">
+        <div class="cont">
+            <h3>{{record.titulo}}</h3>
+            <p>{{str_words(record.resumo,100)}}</p>
+            <a href="{{'/'|app}}/noticia/{{record.slug}}">Veja mais</a>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}

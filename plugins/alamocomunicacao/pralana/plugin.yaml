@@ -1,0 +1,57 @@
+plugin:
+    name: 'alamocomunicacao.pralana::lang.plugin.name'
+    description: 'alamocomunicacao.pralana::lang.plugin.description'
+    author: 'Alamo Comunicação'
+    icon: oc-icon-desktop
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Pralana
+        url: alamocomunicacao/pralana/novidades
+        icon: icon-skyatlas
+        sideMenu:
+            side-menu-item3:
+                label: Banners
+                url: alamocomunicacao/pralana/banners
+                icon: icon-image
+            side-menu-item8:
+                label: 'Categorias Novidades'
+                url: alamocomunicacao/pralana/categoriasnovidades
+                icon: icon-archive
+            side-menu-item4:
+                label: Novidades
+                url: alamocomunicacao/pralana/novidades
+                icon: icon-newspaper-o
+            side-menu-item5:
+                label: Artistas
+                url: alamocomunicacao/pralana/artistas
+                icon: icon-microphone
+            side-menu-item6:
+                label: Representantes
+                url: alamocomunicacao/pralana/representantes
+                icon: icon-sitemap
+    main-menu-item2:
+        label: Produtos
+        url: alamocomunicacao/pralana/categorias
+        icon: icon-skyatlas
+        sideMenu:
+            side-menu-item:
+                label: Produtos
+                url: alamocomunicacao/pralana/produtos
+                icon: icon-sitemap
+            side-menu-item2:
+                label: Filtros
+                url: alamocomunicacao/pralana/filtros
+                icon: icon-filter
+            side-menu-item3:
+                label: Tamanhos
+                url: alamocomunicacao/pralana/tamanhos
+                icon: icon-sliders
+            side-menu-item4:
+                label: Cores
+                url: alamocomunicacao/pralana/cores
+                icon: icon-paint-brush
+permissions:
+    edit_pralana:
+        tab: Pralana
+        label: 'Editar Pralana'

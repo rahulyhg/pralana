@@ -1,0 +1,43 @@
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapéus Pralana</title>
+    <link rel="icon" href="{{ ['assets/img/icon.png?v=1.1']|theme }}"> 
+    <link rel="stylesheet" href="{{ ['assets/css/plugins.css','assets/css/geral.css']|theme }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+    {% styles %}
+</head>
+<body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121807597-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-121807597-1');
+    </script>
+    <header>
+        <div class="mid">
+            <div class="logo">
+                <a href="/"><img src="{{ 'assets/img/logo.png'|theme }}" alt=""></a>
+                <i class="fa fa-bars" aria-hidden="true" onclick="shownav()"></i>
+            </div>
+            <div class="menu">
+                <ul class="nav {% if this.page.id=='home' %}hmm{% endif %}">
+                    <li><a href="{{'/'|app}}/#home" class="nvm">Home</a></li>
+                    <li><a href="{{'/'|app}}/#empresa" class="nvm">Empresa</a></li>
+                    <li><a href="{{'/'|app}}/#produtos" class="nvm">Produtos</a></li>
+                    <li><a href="{{'/'|app}}/#representantes" class="nvm">Representantes</a></li>
+                    <li><a href="{{'/'|app}}/#artistas" class="nvm">Artistas</a></li>
+                    <li><a href="{{'/'|app}}/#novidades" class="nvm">Novidades</a></li>
+                    <li><a href="{{'/'|app}}/#contato" class="nvm">Contato</a></li>
+                    <li><a href="https://www.chapeusbr.com.br/">Loja Virtual</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>

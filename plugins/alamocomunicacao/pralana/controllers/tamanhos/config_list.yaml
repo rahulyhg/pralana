@@ -1,0 +1,12 @@
+list: $/alamocomunicacao/pralana/models/tamanhos/columns.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Tamanhos
+title: Tamanhos
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'alamocomunicacao/pralana/tamanhos/update/:id'

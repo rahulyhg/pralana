@@ -1,0 +1,25 @@
+[builderList bannerprodutos]
+modelClass = "AlamoComunicacao\Pralana\Models\Banners"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "titulo"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = bannerprodutos.records %}
+<div class="main-carousel" id="home">
+    {% for record in records %}
+        {% if record.area == 2 %}
+        <div class="carousel-cell" style="background:url('{{record.background.getPath()}}'); background-size: cover;">
+            <div class="mid">
+                <h2 class="left">{{record.titulo}}</h2>
+                <div class="right">
+                    <img src="{{record.produto.getPath()}}" alt="">
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,10 @@
+name: Representantes
+form: $/alamocomunicacao/pralana/models/representantes/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Representantes
+defaultRedirect: alamocomunicacao/pralana/representantes
+create:
+    redirect: 'alamocomunicacao/pralana/representantes/update/:id'
+    redirectClose: alamocomunicacao/pralana/representantes
+update:
+    redirect: alamocomunicacao/pralana/representantes
+    redirectClose: alamocomunicacao/pralana/representantes

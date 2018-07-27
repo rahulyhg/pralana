@@ -1,0 +1,45 @@
+fields:
+    titulo:
+        label: Título
+        span: full
+        type: text
+    descricao:
+        label: Descrição
+        span: full
+        type: text
+    link:
+        label: Link
+        span: auto
+        type: text
+    orientacao:
+        label: Orientação
+        options:
+            left: Esquerda
+            right: Direita
+        span: auto
+        type: dropdown
+    area:
+        label: Local
+        options:
+            1: Home
+            2: Produtos
+        span: auto
+        type: dropdown
+    produto:
+        label: Produto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    background:
+        label: Background
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload

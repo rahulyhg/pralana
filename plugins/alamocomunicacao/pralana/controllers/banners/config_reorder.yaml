@@ -1,0 +1,5 @@
+title: Banners
+modelClass: AlamoComunicacao\Pralana\Models\Banners
+nameFrom: titulo
+toolbar:
+    buttons: reorder_toolbar

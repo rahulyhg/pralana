@@ -1,0 +1,10 @@
+name: Filtros
+form: $/alamocomunicacao/pralana/models/filtros/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Filtros
+defaultRedirect: alamocomunicacao/pralana/filtros
+create:
+    redirect: 'alamocomunicacao/pralana/filtros/update/:id'
+    redirectClose: alamocomunicacao/pralana/filtros
+update:
+    redirect: alamocomunicacao/pralana/filtros
+    redirectClose: alamocomunicacao/pralana/filtros

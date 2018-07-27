@@ -1,0 +1,20 @@
+columns:
+    nome:
+        label: Nome
+        type: text
+        searchable: true
+    codigo:
+        label: Código
+        type: text
+        searchable: true
+    image:
+        label: Imagem
+        type: partial
+        path: ~/plugins/alamocomunicacao/pralana/models/produtos/_image_column.htm
+    categoria:
+        label: Categoria
+        type: text
+        searchable: true
+        sortable: true
+        select: nome
+        relation: categoria

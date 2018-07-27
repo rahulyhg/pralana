@@ -1,0 +1,17 @@
+columns:
+    representante:
+        label: Representante
+        type: text
+        searchable: true
+        sortable: true
+    telefone:
+        label: Telefone
+        type: text
+    email:
+        label: E-mail
+        type: text
+    uf:
+        label: Estado
+        type: text
+        searchable: false
+        sortable: true

@@ -1,0 +1,28 @@
+[builderList artistas]
+modelClass = "AlamoComunicacao\Pralana\Models\Artistas"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "nome"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = artistas.records %}
+
+{% for record in records %}
+    <div class="carousel-cell">
+        <div class="mid">
+            <div class="right">
+                <img src="{{record.foto.getPath()}}" alt="" class="art">
+                <div class="tx">
+                    <h2>Artistas</h2>
+                    <h3>Conheça os artistas pralana</h3>
+                    <img src="{{ 'assets/img/icondep.png'|theme }}" alt="">
+                    <p>{{record.frase}}</p>
+                    <h4><small>{{record.area}}</small><br>{{record.nome}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

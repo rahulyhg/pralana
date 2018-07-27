@@ -1,0 +1,54 @@
+==
+{% if records.records %}
+    {% if records.tags %}
+    <div class="filt">
+        <span>Filtre</span>
+        <div class="filts">
+            {% for tag in records.tags %}
+                
+                <div class="pretty p-default">
+                    <input type="checkbox" id="filtro" name="filtro" value="{{tag.id}}" data-cat="{{records.titulo.id}}" 
+                    {% for fil in records.fil %}{% if tag.id == fil %}checked{% endif %}{% endfor %}/>
+                    <div class="state p-success">
+                        <label>{{tag.nome}}</label>
+                    </div>
+                </div>
+                
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <h2>{{records.titulo.nome}}</h2>
+    {% if records.filtros %}
+        {% for filtro in records.filtros %}
+            <blockquote>{{filtro.nome}}</blockquote>
+        {% endfor %}
+    {% endif %}
+    <div class="prods">
+        {% for record in records.records %}
+            <div class="prod">
+                <a data-fancybox data-type="iframe" data-src="{{'/'|app}}/produto/{{record.id}}">
+                    <div class="img">
+                        <img src="{{record.image.getPath()}}" alt="">
+                    </div>
+                    <strong>{{record.nome}}</strong><br>
+                    Cod. {{record.codigo}}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if records.pages %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+            {% for i in 1..records.pages %}
+                <li {% if records.page==i %}class="active"{% endif %}><a href="" data-request="{{records.action}}" data-request-data="page: {{i}}, cat: '{{records.cat}}'" data-request-loading>{{i}}</a></li>
+            {% endfor %}
+            </ul>
+        </nav>
+    {% endif %}
+
+{% else %}
+    <h4>Nenhum produto nessa categoria/busca.</h4>
+{% endif %}

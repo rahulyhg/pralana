@@ -1,0 +1,13 @@
+columns:
+    sort_order:
+        label: Ordem
+        type: number
+        searchable: false
+        invisible: true
+        sortable: true
+    nome:
+        label: Nome
+        type: text
+        searchable: true
+        invisible: false
+        sortable: false

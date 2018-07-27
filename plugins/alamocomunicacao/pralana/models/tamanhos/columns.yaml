@@ -1,0 +1,6 @@
+columns:
+    tamanho:
+        label: Tamanho
+        type: text
+        searchable: true
+        sortable: true

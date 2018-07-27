@@ -1,0 +1,10 @@
+name: Cores
+form: $/alamocomunicacao/pralana/models/cores/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Cores
+defaultRedirect: alamocomunicacao/pralana/cores
+create:
+    redirect: 'alamocomunicacao/pralana/cores/update/:id'
+    redirectClose: alamocomunicacao/pralana/cores
+update:
+    redirect: alamocomunicacao/pralana/cores
+    redirectClose: alamocomunicacao/pralana/cores

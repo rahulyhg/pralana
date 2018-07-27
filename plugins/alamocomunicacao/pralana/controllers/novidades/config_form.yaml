@@ -1,0 +1,10 @@
+name: Novidades
+form: $/alamocomunicacao/pralana/models/novidades/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Novidades
+defaultRedirect: alamocomunicacao/pralana/novidades
+create:
+    redirect: 'alamocomunicacao/pralana/novidades/update/:id'
+    redirectClose: alamocomunicacao/pralana/novidades
+update:
+    redirect: alamocomunicacao/pralana/novidades
+    redirectClose: alamocomunicacao/pralana/novidades

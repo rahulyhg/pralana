@@ -1,0 +1,5 @@
+fields:
+    tamanho:
+        label: Tamanho
+        span: full
+        type: text

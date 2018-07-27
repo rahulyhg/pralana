@@ -1,0 +1,10 @@
+name: Banners
+form: $/alamocomunicacao/pralana/models/banners/fields_banners.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Banners
+defaultRedirect: alamocomunicacao/pralana/banners
+create:
+    redirect: 'alamocomunicacao/pralana/banners/update/:id'
+    redirectClose: alamocomunicacao/pralana/banners
+update:
+    redirect: alamocomunicacao/pralana/banners
+    redirectClose: alamocomunicacao/pralana/banners

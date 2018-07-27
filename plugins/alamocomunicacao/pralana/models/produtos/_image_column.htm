@@ -1,0 +1,4 @@
+<?php
+if(isset($value->file_name) and $value->file_name != "") { ?>
+<img src="<?=$value->getThumb(100, 100, ['mode' => 'crop']);?>" width="80">
+<?php } ?>

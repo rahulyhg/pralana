@@ -1,0 +1,49 @@
+title = "produtos"
+url = "/produtos/:slug?"
+is_hidden = 0
+
+[Produtos]
+categoria = "{{:slug}}"
+page = 1
+perPage = 12
+
+[builderList categorias]
+modelClass = "AlamoComunicacao\Pralana\Models\Categorias"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "nome"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% partial "header" %}
+{% set records = categorias.records %}
+    {% partial "bannerprodutos" %}
+
+    <div class="pgprodutos" id="prod">
+        <div class="mid">
+            <div class="title">
+                <div class="hh">
+                    <h2>Qual modelo você procura?</h2>
+                    <h3>Ou clique abaixo no modelo desejado</h3>
+                </div>
+                <div class="inpu">
+                    <form data-request="onSearch" data-request-loading>
+                        <input type="text" name="produto" placeholder="Digite aqui o que você procura"><button type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+            <ul class="cats">
+                {% for record in records %}
+                    <li><a href="{{'/'|app}}/produtos/{{record.slug}}#prod">{{record.nome}}</a></li>
+                {% endfor %}
+                <li><a href="{{'/'|app}}/produtos#prod">Todos</a></li>
+            </ul>
+            <div id="produtos">
+                {% partial 'produtos' records=Produtos.getProdutos %}
+            </div>
+        </div>
+    </div>
+
+{% partial "footer" %}

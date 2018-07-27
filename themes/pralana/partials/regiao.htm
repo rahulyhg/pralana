@@ -1,0 +1,28 @@
+==
+<h3>{{records.uf}}</h3>
+{% if records.records %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Subregião</th>
+                    <th>Representante</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records.records %}
+                    <tr>
+                        <td>{{record.subregiao|raw}}</td>
+                        <td>{{record.representante}}</td>
+                        <td>{{record.email|raw}}</td>
+                        <td>{{record.telefone|raw}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+    <h4>Nenhum representante nessa região.</h4>
+{% endif %}

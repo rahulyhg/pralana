@@ -1,0 +1,159 @@
+title = "home"
+url = "/"
+is_hidden = 0
+
+[contenteditor]
+
+[Regiao]
+estado = "SP"
+
+[emptyForm]
+group = "Site"
+rules[nome] = "required"
+rules[email] = "required|email"
+rules[mensagem] = "required"
+rules_messages[nome.required] = "Nome obrigatório"
+rules_messages[email.required] = "E-mail obrigatório"
+rules_messages[mensagem.required] = "Mensagem obrigatória"
+messages_success = "Mensagem enviada com sucesso, aguarde nosso contato."
+messages_errors = "Houve erro no envio de sua mensagem."
+mail_enabled = 0
+mail_subject = "Contato pelo site - Chapéus Pralana"
+mail_recipients[] = "chapeus@pralana.com.br"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+==
+{% partial "header" %}
+    
+    {% partial "banner" %}
+
+    <main>
+        <div class="empresa" id="empresa">
+            <div class="mid">
+                <div class="ctnt">
+                     {% component 'contenteditor' file='empresa.htm' %}            
+                </div>
+            </div>
+        </div>
+
+        <div class="produtos" id="produtos">
+            <div class="mid">
+                <h2>Nossos Produtos</h2>
+                <p>Veja abaixo alguns de nossos produtos:</p>
+            </div>
+            <div class="carousel">
+                {% partial "produtos_home" %}
+            </div>
+            <a class="btmore" href="produtos">veja aqui todos os produtos</a>
+        </div>
+
+        <div class="novidades" id="novidades">
+            <div class="mid">
+                <h2>Novidades</h2>
+                <p>Acompanhe nossas novidades</p>
+            </div>
+            <div class="wrapper">
+                {% partial "novidades_home" %}
+            </div>
+            <div class="mid">
+                <a href="noticias" class="maismat">Veja mais matérias</a>
+            </div>
+        </div>
+
+        <div class="artistas" id="artistas">
+            <div class="mid">
+                <div class="arts">
+                    {% partial "artistas" %}            
+                </div>
+            </div>
+        </div>
+
+        <div class="contato" id="contato">
+            <div class="mid">
+                <h2>Contato</h2>
+                <p>Entre em contato conosco</p>
+                <div class="infos">
+                    <div class="bxi">
+                        <h2>Como chegar</h2>
+                        {% component 'contenteditor' file='endereco.htm' %}  
+                    </div>
+                    <div class="bxi">
+                        <h2>Telefones</h2>
+                        {% component 'contenteditor' file='telefone.htm' %}  
+                    </div>
+                    <div id="map"></div>
+                    <div class="dpt">
+                        <h2>Departamentos</h2>
+                        {% component 'contenteditor' file='departamentos.htm' %}  
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="formulario">
+            <div class="mid">
+                <h4 class="tit">Envie uma mensagem</h4>
+                <p class="tit">Em breve responderemos a sua mensagem.</p>
+                {% component 'emptyForm' %}
+            </div>
+        </div>
+
+        <div class="representantes" id="representantes">
+            <div class="mid">
+                <h2>Representantes</h2>
+                <p>Encontre um representante mais perto de você.</p>
+                <div class="flx">
+                    <div class="list">
+                        <h3>Escolha uma região</h3>
+                        <select name="estados">
+                            <option value="">Estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="mapa">
+                        {% partial "mapa" %}
+                    </div>
+                </div>                
+            </div>
+            <div class="results">
+                <div class="mid">
+                    <div class="rel" id="represent">
+                        {% partial 'regiao' records=Regiao.getRepresentantes %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background:url('{{ 'assets/img/bannerrod.jpg'|theme }}') center;background-size:cover;" class="banloja">
+    </main>
+
+{% partial "footer" %}

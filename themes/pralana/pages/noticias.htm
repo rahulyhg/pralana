@@ -1,0 +1,48 @@
+title = "noticias"
+url = "/noticias"
+is_hidden = 0
+
+[Novidades]
+
+[builderList categoriasnovidades]
+modelClass = "AlamoComunicacao\Pralana\Models\CategoriasNovidades"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "nome"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = categoriasnovidades.records %}
+{% partial "header" %}
+{% partial "bannerprodutos" %}
+<div class="pgnoticias">
+    <div class="title">
+        <div class="mid">
+            Novidades
+        </div>
+    </div>
+    <div class="content mid">
+        <div class="filtro">
+            <ul class="nav">
+                <li class="filt"><a href="" data-request="onGetNoticias" data-request-data="page: '1'">Filtre sua notícia</a></li>
+                {% for record in records %}
+                    {% if loop.index < 6 %}
+                        <li><a href="" data-request="onGetCategoria" data-request-data="cat: '{{record.id}}'" data-request-loading>{{record.nome}}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <div class="search">
+                <form data-request="onSearch" data-request-loading>
+                    <input type="text" name="termo" placeholder="ou digite aqui o que você procura">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+        <div id="novidades">
+            {% partial 'novidades_interna' records=Novidades.getNoticias %}
+        </div>
+    </div>
+</div>
+{% partial "footer" %}

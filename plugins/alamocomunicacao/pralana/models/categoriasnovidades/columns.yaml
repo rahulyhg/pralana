@@ -1,0 +1,6 @@
+columns:
+    nome:
+        label: Nome
+        type: text
+        searchable: true
+        sortable: true

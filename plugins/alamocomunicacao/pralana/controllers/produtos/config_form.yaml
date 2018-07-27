@@ -1,0 +1,10 @@
+name: Produtos
+form: $/alamocomunicacao/pralana/models/produtos/fields_produtos.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Produtos
+defaultRedirect: alamocomunicacao/pralana/produtos
+create:
+    redirect: 'alamocomunicacao/pralana/produtos/update/:id'
+    redirectClose: alamocomunicacao/pralana/produtos
+update:
+    redirect: alamocomunicacao/pralana/produtos
+    redirectClose: alamocomunicacao/pralana/produtos

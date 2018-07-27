@@ -1,0 +1,12 @@
+list: $/alamocomunicacao/pralana/models/categoriasnovidades/columns.yaml
+modelClass: AlamoComunicacao\Pralana\Models\CategoriasNovidades
+title: CategoriasNovidades
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'alamocomunicacao/pralana/categoriasnovidades/update/:id'

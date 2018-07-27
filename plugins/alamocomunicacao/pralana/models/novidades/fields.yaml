@@ -1,0 +1,37 @@
+fields:
+    titulo:
+        label: Título
+        span: auto
+        type: text
+    slug:
+        label: URL
+        span: auto
+        preset:
+            field: titulo
+            type: slug
+        type: text
+    resumo:
+        label: Resumo
+        span: left
+        placeholder: 'Pequeno resumo para home'
+        type: text
+    categorias:
+        label: Categoria
+        nameFrom: nome
+        descriptionFrom: description
+        span: auto
+        type: relation
+    texto:
+        label: Texto
+        size: large
+        span: full
+        type: richeditor
+    imagens:
+        label: Galeria
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

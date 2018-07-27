@@ -1,0 +1,10 @@
+name: Artistas
+form: $/alamocomunicacao/pralana/models/artistas/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Artistas
+defaultRedirect: alamocomunicacao/pralana/artistas
+create:
+    redirect: 'alamocomunicacao/pralana/artistas/update/:id'
+    redirectClose: alamocomunicacao/pralana/artistas
+update:
+    redirect: alamocomunicacao/pralana/artistas
+    redirectClose: alamocomunicacao/pralana/artistas

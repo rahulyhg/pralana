@@ -1,0 +1,10 @@
+name: Categorias
+form: $/alamocomunicacao/pralana/models/categorias/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Categorias
+defaultRedirect: alamocomunicacao/pralana/categorias
+create:
+    redirect: 'alamocomunicacao/pralana/categorias/update/:id'
+    redirectClose: alamocomunicacao/pralana/categorias
+update:
+    redirect: alamocomunicacao/pralana/categorias
+    redirectClose: alamocomunicacao/pralana/categorias

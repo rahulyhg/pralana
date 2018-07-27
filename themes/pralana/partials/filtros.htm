@@ -1,0 +1,20 @@
+[builderList filtros]
+modelClass = "AlamoComunicacao\Pralana\Models\Filtros"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "nome"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = filtros.records %}
+
+{% for record in records %}
+    <div class="pretty p-default">
+        <input type="checkbox" id="filtro" name="filtro" value="{{record.id}}"/>
+        <div class="state p-success">
+            <label>{{record.nome}}</label>
+        </div>
+    </div>
+{% endfor %}

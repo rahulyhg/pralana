@@ -1,0 +1,36 @@
+title = "noticia"
+url = "/noticia/:slug"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "AlamoComunicacao\Pralana\Models\Novidades"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "titulo"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% partial "header" %}
+{% partial "bannerprodutos" %}
+<div class="pgnoticias">
+    <div class="title">
+        <div class="mid">
+            Novidades / <span>{{record.titulo}}</span>
+        </div>
+    </div>
+    <div class="noticia mid">
+        <h1>{{record.titulo}}</h1>
+        <h4>{{record.created_at}}</h4>
+        <div class="contnot">
+            <div class="text">
+                {{record.texto|raw}}
+            </div>
+            <div class="gallery">
+                {% for image in record.imagens %}
+                <img src="{{image.getPath()}}" data-full="{{image.getPath()}}">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% partial "footer" %}

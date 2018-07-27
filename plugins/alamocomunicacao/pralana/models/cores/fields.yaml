@@ -1,0 +1,5 @@
+fields:
+    nome:
+        label: Cor
+        span: full
+        type: text

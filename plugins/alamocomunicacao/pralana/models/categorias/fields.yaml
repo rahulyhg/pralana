@@ -1,0 +1,12 @@
+fields:
+    nome:
+        label: Nome
+        span: left
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: nome
+            type: slug
+        type: text

@@ -1,0 +1,19 @@
+columns:
+    sort_order:
+        label: Ordem
+        type: number
+        searchable: false
+        invisible: true
+        sortable: true
+    titulo:
+        label: Título
+        type: text
+        searchable: true
+    produto:
+        label: Produto
+        type: partial
+        path: ~/plugins/alamocomunicacao/pralana/models/banners/_image_column.htm
+    area:
+        label: Local
+        type: partial
+        path: ~/plugins/alamocomunicacao/pralana/models/banners/_area_column.htm

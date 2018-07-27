@@ -1,0 +1,10 @@
+name: Tamanhos
+form: $/alamocomunicacao/pralana/models/tamanhos/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Tamanhos
+defaultRedirect: alamocomunicacao/pralana/tamanhos
+create:
+    redirect: 'alamocomunicacao/pralana/tamanhos/update/:id'
+    redirectClose: alamocomunicacao/pralana/tamanhos
+update:
+    redirect: alamocomunicacao/pralana/tamanhos
+    redirectClose: alamocomunicacao/pralana/tamanhos
