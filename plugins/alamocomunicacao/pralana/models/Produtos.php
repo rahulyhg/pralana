@@ -44,18 +44,23 @@ class Produtos extends Model
 
     public function getProdutos(){
         $produtos = [];
-        $data = $this->with('tags','tamanho','cor','categoria')->get();
+        $produtos['imgsprod'] = 0;
+        $produtos['produtos'] = [];
+        $data = $this->with('tags','tamanho','cor','categoria')->limit(100)->get();
         foreach($data as $prod){
             $prod['img'] = $this->getImageProduct($prod['id']);
-            $produtos[] = $prod;
+            if($this->getImageProduct($prod['id'])){
+                $produtos['imgsprod']++;
+            }
+            $produtos['produtos'][] = $prod;
         }
-        return json_encode($data);
+        return json_encode($produtos);
     }
 
     public function getImageProduct($id){
         $image = $this->find($id);
         if(!empty($image->image)){
-            return $image->image->getThumb(200, 200, ['mode' => 'crop']);
+            return $image->image->getThumb(200, 200);
         }else{
             return false;
         }

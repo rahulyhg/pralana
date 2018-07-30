@@ -1,3 +1,4 @@
+Header set Access-Control-Allow-Origin "*"
 <IfModule mod_rewrite.c>
 
     <IfModule mod_negotiation.c>
@@ -57,6 +58,3 @@
     RewriteRule ^ index.php [L]
     
 </IfModule>
-
-Header set Access-Control-Allow-Origin "*"
-Header set Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
