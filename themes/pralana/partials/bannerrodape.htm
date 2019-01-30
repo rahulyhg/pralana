@@ -1,0 +1,33 @@
+[builderList banfot]
+modelClass = "AlamoComunicacao\Pralana\Models\BannersFooter"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "titulo"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<style>
+    .rodape{
+        width: 100%;
+    }
+    .rodape .carousel-cell{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30em;
+    }
+</style>
+<div class="rodape">
+    {% set records = banfot.records %}
+
+    {% for record in records %}
+        <div class="carousel-cell">
+            <a {% if record.link %} href="{{record.link}}" {% endif %} target="_blank">
+                <img src="{{record.image.getPath()}}" alt="">
+            </a>
+        </div>
+    {% endfor %}
+</div>

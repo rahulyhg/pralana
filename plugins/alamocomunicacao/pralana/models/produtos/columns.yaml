@@ -18,3 +18,9 @@ columns:
         sortable: true
         select: nome
         relation: categoria
+    artistas:
+        label: Artista
+        type: text
+        searchable: true
+        select: nome
+        relation: artistas

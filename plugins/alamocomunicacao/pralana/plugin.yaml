@@ -14,6 +14,12 @@ navigation:
                 label: Banners
                 url: alamocomunicacao/pralana/banners
                 icon: icon-image
+            side-menu-item10:
+                label: 'Banners Rodapé'
+                url: alamocomunicacao/pralana/bannersfooter
+                icon: icon-image
+                permissions:
+                    - edit_pralana
             side-menu-item8:
                 label: 'Categorias Novidades'
                 url: alamocomunicacao/pralana/categoriasnovidades
@@ -51,6 +57,18 @@ navigation:
                 label: Cores
                 url: alamocomunicacao/pralana/cores
                 icon: icon-paint-brush
+            side-menu-item11:
+                label: Carneiras
+                url: alamocomunicacao/pralana/carneira
+                icon: icon-reorder
+                permissions:
+                    - edit_pralana
+            side-menu-item12:
+                label: Materiais
+                url: alamocomunicacao/pralana/materiais
+                icon: icon-sliders
+                permissions:
+                    - edit_pralana
 permissions:
     edit_pralana:
         tab: Pralana

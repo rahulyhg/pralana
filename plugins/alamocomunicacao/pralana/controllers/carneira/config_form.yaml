@@ -1,0 +1,10 @@
+name: Carneira
+form: $/alamocomunicacao/pralana/models/carneira/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Carneira
+defaultRedirect: alamocomunicacao/pralana/carneira
+create:
+    redirect: 'alamocomunicacao/pralana/carneira/update/:id'
+    redirectClose: alamocomunicacao/pralana/carneira
+update:
+    redirect: alamocomunicacao/pralana/carneira
+    redirectClose: alamocomunicacao/pralana/carneira

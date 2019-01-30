@@ -56,13 +56,13 @@ notFoundMessage = "Record not found"
                 {% endfor %}
             </ul>
             <h3>Material</h3>
-            <p>{{record.material}}</p>
+            <p>{{record.materiais.titulo}}</p>
             {% if record.aba %}
             <h3>Aba</h3>
             <p>{{record.aba}}</p>
             {% endif %}
             <h3>Carneira</h3>
-            <p>{{record.carneira}}</p>
+            <p>{{record.carneira.titulo}}</p>
             {% if record.forro %}
             <h3>Forro</h3>
             <p>{% if record.forro == 1 %}Sim{% else %}Não{% endif %}</p>

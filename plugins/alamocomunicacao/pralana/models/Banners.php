@@ -33,7 +33,33 @@ class Banners extends Model
     public $table = 'alamocomunicacao_pralana_banners';
 
     public function getBanners(){
-        $banners = $this->with('produto','background')->get();
+        $banners = [];
+        $data = $this->get();
+        
+        foreach($data as $prod){
+            $prod['img'] = $this->getImageProduct($prod['id']);
+            $prod['imgbg'] = $this->getImageBackground($prod['id']);
+            $banners['banners'][] = $prod;
+        }
+
         return json_encode($banners);
+    }
+
+    public function getImageProduct($id){
+        $image = $this->find($id);
+        if(!empty($image->produto)){
+            return $image->produto->getThumb(200, 200);
+        }else{
+            return false;
+        }
+    }
+
+    public function getImageBackground($id){
+        $image = $this->find($id);
+        if(!empty($image->background)){
+            return $image->background->getThumb(600, 294);
+        }else{
+            return false;
+        }
     }
 }

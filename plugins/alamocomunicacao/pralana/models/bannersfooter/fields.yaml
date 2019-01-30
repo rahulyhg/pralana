@@ -1,0 +1,18 @@
+fields:
+    descricao:
+        label: Descrição
+        span: left
+        type: text
+    link:
+        label: Link
+        span: right
+        type: text
+    image:
+        label: Banner
+        mode: image
+        useCaption: 0
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

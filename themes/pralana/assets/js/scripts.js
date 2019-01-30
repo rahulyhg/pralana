@@ -11,6 +11,15 @@ $('.main-carousel').flickity({
     pageDots: false,
     autoPlay: 5000
 });
+$('.rodape').flickity({
+    cellAlign: 'left',
+    contain: true,
+    adaptiveHeight: true,
+    pageDots: false,
+    prevNextButtons: false,
+    autoPlay: 5000,
+    draggable: '<1'
+});
 $('.carousel').flickity({
     contain: true,
     pageDots: false,
@@ -31,13 +40,22 @@ $('ul.hmm li a.nvm').click(function(event){
 });
 $(document).ready(function(){
     initMap();
-    $('.arts').flickity({
-        cellAlign: 'left',
-        pageDots: true,
-        prevNextButtons: false,
-        adaptiveHeight: true,
-        autoPlay: 5000
-    });
+    setTimeout(()=>{
+        $('.arts').flickity({
+            cellAlign: 'left',
+            pageDots: false,
+            prevNextButtons: true,
+            adaptiveHeight: true,
+            autoPlay: 5000,
+            draggable: false
+        });
+        $('.arts .carousel').flickity({
+            cellAlign: 'left',
+            prevNextButtons: false,
+            adaptiveHeight: true
+        });
+    },1500)
+    
 });
 $(window).resize(function(){
     if($(window).width()>768){

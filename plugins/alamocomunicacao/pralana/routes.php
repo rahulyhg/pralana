@@ -6,6 +6,8 @@
     Route::get('/api/page/{pg}', 'AlamoComunicacao\Pralana\Http\Controllers\PagesController@getPage');
     Route::post('/api/contato', 'Martin\Forms\Models\Record@saveFormApp');
 
+    // Route::get('/materiais', 'AlamoComunicacao\Pralana\Models\Produtos@setMateriais');
+    
     // Route::get('/api/produtos/{pg?}/{perpage?}', 'AlamoComunicacao\Pralana\Models\Produtos@getProdutos');
     // Route::get('/api/searchprodutos/{prod?}', 'AlamoComunicacao\Pralana\Models\Produtos@searchprodutos');
     // Route::get('/api/catprodutos/{cat?}/{pg?}/{perpage?}', 'AlamoComunicacao\Pralana\Models\Produtos@catprodutos');

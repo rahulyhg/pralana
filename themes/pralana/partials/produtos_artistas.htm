@@ -1,0 +1,22 @@
+==
+use AlamoComunicacao\Pralana\Models\Produtos;
+function onStart(){
+    $this['records'] = Produtos::where('artistas_id', $this->artista)->get();
+}
+==
+{% if records is not empty %}
+    <h2>Linha {{nome}}</h2> 
+    <div class="carousel">
+        {% for record in records %}
+            <div class="carousel-cell">
+                <a data-fancybox data-type="iframe" data-src="{{'/'|app}}/produto/{{record.id}}">
+                    <div class="img">
+                        <img src="{{record.image.getPath()}}" alt="">
+                    </div>
+                    <strong>{{record.nome}}</strong><br>
+                    Cod. {{record.codigo}}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

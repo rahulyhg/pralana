@@ -1,0 +1,10 @@
+name: BannersFooter
+form: $/alamocomunicacao/pralana/models/bannersfooter/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\BannersFooter
+defaultRedirect: alamocomunicacao/pralana/bannersfooter
+create:
+    redirect: 'alamocomunicacao/pralana/bannersfooter/update/:id'
+    redirectClose: alamocomunicacao/pralana/bannersfooter
+update:
+    redirect: alamocomunicacao/pralana/bannersfooter
+    redirectClose: alamocomunicacao/pralana/bannersfooter

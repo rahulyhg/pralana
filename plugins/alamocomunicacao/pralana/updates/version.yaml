@@ -108,3 +108,27 @@
 1.0.37:
     - 'Updated table alamocomunicacao_pralana_artistas'
     - builder_table_update_alamocomunicacao_pralana_artistas.php
+1.0.38:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_9.php
+1.0.39:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_10.php
+1.0.40:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_11.php
+1.0.41:
+    - 'Updated table alamocomunicacao_pralana_produtos'
+    - builder_table_update_alamocomunicacao_pralana_produtos_9.php
+1.0.42:
+    - 'Created table alamocomunicacao_pralana_banners_footer'
+    - builder_table_create_alamocomunicacao_pralana_banners_footer.php
+1.0.43:
+    - 'Updated table alamocomunicacao_pralana_banners_footer'
+    - builder_table_update_alamocomunicacao_pralana_banners_footer.php
+1.0.44:
+    - 'Created table alamocomunicacao_pralana_carneira'
+    - builder_table_create_alamocomunicacao_pralana_carneira.php
+1.0.45:
+    - 'Created table alamocomunicacao_pralana_materiais'
+    - builder_table_create_alamocomunicacao_pralana_materiais.php

@@ -1,0 +1,10 @@
+columns:
+    descricao:
+        label: Descrição
+        type: text
+        searchable: true
+        sortable: true
+    image:
+        label: Imagem
+        type: partial
+        path: ~/plugins/alamocomunicacao/pralana/models/bannersfooter/_image_column.htm

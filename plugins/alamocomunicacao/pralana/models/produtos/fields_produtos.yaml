@@ -29,14 +29,18 @@ fields:
         label: Aba
         span: left
         type: text
-    material:
-        label: Material
-        span: right
-        type: text
+    materiais:
+        label: Materiais
+        nameFrom: titulo
+        descriptionFrom: description
+        span: auto
+        type: relation
     carneira:
         label: Carneira
+        nameFrom: titulo
+        descriptionFrom: description
         span: auto
-        type: text
+        type: relation
     destaque:
         label: 'Destaque Home'
         span: right
@@ -59,4 +63,12 @@ fields:
         nameFrom: tamanho
         descriptionFrom: description
         span: auto
+        type: relation
+    artistas:
+        label: Artista
+        nameFrom: nome
+        descriptionFrom: description
+        span: right
+        emptyOption: Nenhum
+        containerAttributes: {  }
         type: relation

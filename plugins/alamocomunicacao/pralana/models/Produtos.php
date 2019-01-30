@@ -3,6 +3,8 @@
 use Model;
 use AlamoComunicacao\Pralana\Helper\Helper as Helper;
 use AlamoComunicacao\Pralana\Components\Produtos as CompProd;
+use AlamoComunicacao\Pralana\Models\Materiais;
+use AlamoComunicacao\Pralana\Models\Carneira;
 
 /**
  * Model
@@ -16,13 +18,16 @@ class Produtos extends Model
     ];
 
     public $belongsTo = [
-        'categoria' => ['\AlamoComunicacao\Pralana\Models\Categorias']
+        'categoria' => ['\AlamoComunicacao\Pralana\Models\Categorias','order'=>'nome'],
+        'artistas' => ['\AlamoComunicacao\Pralana\Models\Artistas','order'=>'nome'],
+        'materiais' => ['\AlamoComunicacao\Pralana\Models\Materiais','order'=>'titulo'],
+        'carneira' => ['\AlamoComunicacao\Pralana\Models\Carneira','order'=>'titulo']
     ];
 
     public $belongsToMany = [
-        'tags' => ['\AlamoComunicacao\Pralana\Models\Filtros','table'=>'alamocomunicacao_pralana_filtros_produtos'],
-        'tamanho' => ['\AlamoComunicacao\Pralana\Models\Tamanhos','table'=>'alamocomunicacao_pralana_tamanhos_produtos'],
-        'cor' => ['\AlamoComunicacao\Pralana\Models\Cores','table'=>'alamocomunicacao_pralana_cores_produtos']
+        'tags' => ['\AlamoComunicacao\Pralana\Models\Filtros','table'=>'alamocomunicacao_pralana_filtros_produtos','order'=>'nome'],
+        'tamanho' => ['\AlamoComunicacao\Pralana\Models\Tamanhos','table'=>'alamocomunicacao_pralana_tamanhos_produtos','order'=>'tamanho'],
+        'cor' => ['\AlamoComunicacao\Pralana\Models\Cores','table'=>'alamocomunicacao_pralana_cores_produtos','order'=>'nome']
     ];
     
     /*
@@ -42,11 +47,45 @@ class Produtos extends Model
      */
     public $table = 'alamocomunicacao_pralana_produtos';
 
+    // public function setMateriais(){
+    //     $res = $this->select('materiais_id')->groupBy('materiais_id')->get();
+    //     $res = json_encode($res);
+    //     $res = json_decode($res);
+    //     array_shift($res);
+
+    //     foreach($res as $r){
+    //         Materiais::insert(['titulo'=>$r->materiais_id]);
+    //     }
+    // }
+
+    // public function setMateriais(){
+    //     $res = $this->select('carneira_id')->groupBy('carneira_id')->get();
+    //     $res = json_encode($res);
+    //     $res = json_decode($res);
+    //     array_shift($res);
+
+    //     foreach($res as $r){
+    //         Carneira::insert(['titulo'=>$r->carneira_id]);
+    //     }
+    // }
+
+    // public function setMateriais(){
+    //     $car = Carneira::all();
+    //     $mat = Materiais::all();
+
+    //     foreach($car as $c){
+    //         $this->where('carneira_id','=',$c['titulo'])->update(['carneira_id'=>$c['id']]);
+    //     }
+    //     foreach($mat as $m){
+    //         $this->where('materiais_id','=',$m['titulo'])->update(['materiais_id'=>$m['id']]);
+    //     }
+    // }
+
     public function getProdutos(){
         $produtos = [];
         $produtos['imgsprod'] = 0;
         $produtos['produtos'] = [];
-        $data = $this->with('tags','tamanho','cor','categoria')->limit(100)->get();
+        $data = $this->with('tags','tamanho','cor','categoria','materiais','carneira')->get();
         foreach($data as $prod){
             $prod['img'] = $this->getImageProduct($prod['id']);
             if($this->getImageProduct($prod['id'])){

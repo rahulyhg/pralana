@@ -1,0 +1,10 @@
+name: Materiais
+form: $/alamocomunicacao/pralana/models/materiais/fields.yaml
+modelClass: AlamoComunicacao\Pralana\Models\Materiais
+defaultRedirect: alamocomunicacao/pralana/materiais
+create:
+    redirect: 'alamocomunicacao/pralana/materiais/update/:id'
+    redirectClose: alamocomunicacao/pralana/materiais
+update:
+    redirect: alamocomunicacao/pralana/materiais
+    redirectClose: alamocomunicacao/pralana/materiais
